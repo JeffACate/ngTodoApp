@@ -1,6 +1,13 @@
-<H2>Welome to ngTodo</H2>
-<nav>
-    <span><a routerLink="/">Home</a></span>
-    <span><a routerLink="/todos">Todos</a></span>
+<nav class="navbar navbar-expand-sm bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/">ngTodo</a>
+        <ul class="nav justfy-content-center">
+            <li class="nav-link"><a routerLink="/">Home</a></li>
+            <li class="nav-link"><a routerLink="/todos">Todos</a></li>
+        </ul>
+    </div>
 </nav>
+<div class="container p-4 text-center">    
+    <h2>Welome to ngTodo</h2>
+</div>
 <router-outlet></router-outlet>
