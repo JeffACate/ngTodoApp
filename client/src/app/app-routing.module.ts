@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TodoComponent } from "./todo/todo.component";
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent},
   { path: 'todos', component: TodoComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/home'},
 ];
 
 @NgModule({
