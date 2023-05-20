@@ -1,16 +1,16 @@
-<div class="container">
-    <div class="pt-4 text-center">
-        <h2>Todos</h2>
-    </div>
-    <div class="mb-3">
-        <div class="m-3">
-            <input type="text" class="form-control text-center" placeholder="Todo" aria-label="Recipient's username" aria-describedby="basic-addon2">
-        </div>
-        <div class="row mx-3">
-            <button class="btn btn-outline-success" type="button">Add</button>
-        </div>
-    </div>
-    <div class="container text-center">
-        <label>stuff</label>
-    </div>
+<div class="container text-center">
+  <div class="pt-4">
+    <h2>Todos</h2>
+  </div>
+  <div class="text-center">
+    <input id="todo" type="text" class="form-control text-center w-75 mx-auto mb-3" [(ngModel)]="todo" placeholder="Todo">
+  </div>
+  <button type="button" class="btn btn-outline-success mx-2 w-25" [(ngModel)]="todo" (click)="AddTodo(todo)">Add</button>
+  <button type="button" class="btn btn-outline-danger mx-2 w-25"  (click)="ClearList()">Clear</button>
+</div>
+<hr />
+<div class="text-center"> 
+  <li class="" *ngFor="let todo of todos">
+      <span>{{todo}}</span>
+  </li>
 </div>
