@@ -1,16 +1,42 @@
-<div class="container text-center">
-  <div class="pt-4">
-    <h2>Todos</h2>
+<div class="container p-4 text-center">
+  <div>
+    <h2>{{title}}</h2>
   </div>
-  <div class="text-center">
-    <input id="todo" type="text" class="form-control text-center w-75 mx-auto mb-3" [(ngModel)]="todo" placeholder="Todo">
+  <div class="">
+    <input class="text-center mb-3 w-75" type="text" [(ngModel)]="name" placeholder="Todo">
+    <input class="text-center mb-3 w-25" type="number" [(ngModel)]="total" placeholder="1" [min]="1">
   </div>
-  <button type="button" class="btn btn-outline-success mx-2 w-25" [(ngModel)]="todo" (click)="AddTodo(todo)">Add</button>
-  <button type="button" class="btn btn-outline-danger mx-2 w-25"  (click)="ClearList()">Clear</button>
+  <div>
+    <button class="btn btn-outline-success mx-2" type="button" (click)="AddTodo(name, total)">Add</button>
+    <button class="btn btn-outline-warning mx-2" type="button" (click)="ClearCompleted()">Clear Completed</button>
+    <button class="btn btn-outline-danger mx-2" type="button" (click)="ClearList()">Clear</button>
+  </div>
 </div>
 <hr />
-<div class="text-center"> 
-  <li class="" *ngFor="let todo of todos">
-      <span>{{todo}}</span>
-  </li>
-</div>
+
+<!-- List todos (new component?) -->
+  <table class="table table-striped text-center align-middle">
+      <thead class="bg-success">
+        <tr>
+          <th class="col-1"></th>
+          <th class="col-sm-auto">Task</th>
+          <th class="col-1">done</th>
+          <th class="col-1"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let todoItem of todos">
+          <td>
+            <input type="checkbox" [(ngModel)]="todoItem.IsComplete" [checked]="todoItem.IsComplete" />
+          </td>
+          <td>{{todoItem.Title}}</td>
+          <td class="col-1">
+            {{todoItem.CurrentCompletions}}/{{todoItem.TotalCompletions}}
+          </td>
+        <td class="" style="min-width: 140px;">
+          <button class="btn btn-success mx-1" (click)="AddCompletion(todoItem)"> + </button>
+          <button class="btn btn-danger mx-1" (click)="RemoveCompletion(todoItem)"> - </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
