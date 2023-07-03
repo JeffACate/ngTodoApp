@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Todo } from "./Todo";
+import { Todo } from "./Mocks/Todo";
 import { v4 as uuid } from "uuid";
-import { Todos } from './Todos';
+import { Todos } from './Mocks/Todos';
 
 @Component({
   selector: 'app-todo',

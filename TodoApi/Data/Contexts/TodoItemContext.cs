@@ -12,7 +12,6 @@ public class TodoItemContext : DbContext
     {
         var folder = @"/home/jeff/dev/ngTodoApp/TodoApi/Data/Providers/";
         DbPath = System.IO.Path.Join(folder, "TodoItems.db");
-        System.Console.WriteLine(DbPath);
     }
 
     // The following configures EF to create a Sqlite database file in the
