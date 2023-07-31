@@ -1,9 +1,9 @@
 export interface Todo {
-    TodoItemId: string // serialized guid
-    Title: string;
-    TotalCompletions: number;
     CurrentCompletions: number;
     IsComplete: boolean;
+    Title: string;
+    TodoItemId: string // serialized guid
+    TotalCompletions: number;
 
     // constructor() {
     //     this.TodoItemId = "";

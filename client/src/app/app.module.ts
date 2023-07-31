@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
 import { HomeComponent } from './home/home.component';
@@ -12,12 +13,13 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     AppComponent,
     TodoComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
