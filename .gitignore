@@ -10,6 +10,7 @@
 /bazel-out
 
 # Node
+*/node_modules
 # User-specific files
 *.suo
 *.user
@@ -210,6 +211,7 @@ Generated_Code/
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+
 # Backup & report files from converting an old project file
 # to a newer Visual Studio version. Backup files are not needed,
 # because we have git ;-)
