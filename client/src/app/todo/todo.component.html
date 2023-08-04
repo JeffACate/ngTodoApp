@@ -25,18 +25,17 @@
     </thead>
     <tbody>
       <tr *ngFor="let todoItem of todos">
-        <td>{{todoItem.CurrentCompletions}}</td>
-        <!-- <td>
-          <input type="checkbox" [(ngModel)]="todoItem.IsComplete" [checked]="todoItem.IsComplete" />
+        <td>
+          <input type="checkbox" [(ngModel)]="todoItem.isComplete" [checked]="todoItem.isComplete" />
         </td>
-        <td>{{todoItem.Title}}</td>
+        <td>{{todoItem.title}}</td>
         <td class="col-1">
-          {{todoItem.CurrentCompletions}}{{todoItem.TotalCompletions}}
+          {{todoItem.currentCompletions}}/{{todoItem.totalCompletions}}
         </td>
         <td class="" style="min-width: 140px;">
           <button class="btn btn-success mx-1" (click)="AddCompletion(todoItem)"> + </button>
           <button class="btn btn-danger mx-1" (click)="RemoveCompletion(todoItem)"> - </button>
-        </td> -->
+        </td>
       </tr>
   </tbody>
 </table>
